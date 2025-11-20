@@ -1,6 +1,7 @@
 import React from "react";
 import NavbarLanding from "./NavbarLanding";
 import Footer from "./Footer";
+import { useNavigate } from "react-router-dom";
 
 // IMPORT DEVELOPER IMAGES
 import chinmay from "../assets/devs/chinmay.jpeg";
@@ -9,9 +10,11 @@ import odeyar from "../assets/devs/odeyar.jpeg";
 import k0und1nya from "../assets/devs/k0und1nya.jpeg";
 
 export default function LandingPage() {
+
+  const navigate = useNavigate();   // ✅ REQUIRED FOR PAGE NAVIGATION
+
   return (
     <div className="relative min-h-screen bg-white overflow-hidden scroll-smooth pt-28">
-      
       {/* NAVBAR */}
       <NavbarLanding />
 
@@ -24,13 +27,14 @@ export default function LandingPage() {
       {/* HERO SECTION */}
       <section className="pt-20 md:pt-28 pb-20 px-6">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-14 md:gap-20 items-center">
-          
           <div></div>
 
           <div className="text-center md:text-left">
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-gray-900 leading-tight">
               A Modern Academic Portal
-              <span className="block text-indigo-600">Built for KIT Students</span>
+              <span className="block text-indigo-600">
+                Built for KIT Students
+              </span>
             </h1>
 
             <p className="text-gray-700 mt-5 text-lg sm:text-xl leading-relaxed max-w-lg mx-auto md:mx-0">
@@ -38,21 +42,27 @@ export default function LandingPage() {
               materials — all in one beautiful and organized platform.
             </p>
 
+            {/* ⭐ FIXED BUTTON */}
             <div className="mt-10 flex flex-wrap gap-5 justify-center md:justify-start">
-              <a href="/home" className="px-8 py-4 rounded-full text-lg font-semibold bg-indigo-600 hover:bg-indigo-700 text-white shadow-lg transition-transform hover:scale-[1.05]">
+              <button
+                onClick={() => navigate("/home")}   // ⭐ OPENS HOMEPAGE IN SEPARATE PAGE
+                className="px-8 py-4 rounded-full text-lg font-semibold bg-indigo-600 hover:bg-indigo-700 text-white shadow-lg transition-transform hover:scale-[1.05]"
+              >
                 Get Started
-              </a>
+              </button>
 
-              <a href="#about" className="px-8 py-4 rounded-full text-lg font-semibold border border-gray-300 bg-white hover:bg-gray-100 text-gray-800 shadow-sm transition-transform hover:scale-[1.05]">
+              <a
+                href="#about"
+                className="px-8 py-4 rounded-full text-lg font-semibold border border-gray-300 bg-white hover:bg-gray-100 text-gray-800 shadow-sm transition-transform hover:scale-[1.05]"
+              >
                 Learn More
               </a>
             </div>
           </div>
-
         </div>
       </section>
 
-      {/* ABOUT KIT */}
+       {/* ABOUT KIT */}
       <section id="about" className="py-24 scroll-mt-32 bg-white">
         <div className="max-w-5xl mx-auto px-6 text-center">
           <h2 className="text-4xl font-bold text-gray-900 mb-6">About Kalpataru Institute of Technology</h2>
@@ -63,7 +73,7 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* FEATURES */}
+         {/* FEATURES */}
       <section id="features" className="py-24 scroll-mt-32">
         <h2 className="text-center text-4xl font-bold text-gray-900 mb-14">Why Choose KIT MATRIX?</h2>
 
@@ -74,7 +84,7 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* ABOUT KIT MATRIX */}
+        {/* ABOUT KIT MATRIX */}
       <section id="contact" className="py-24 scroll-mt-32 bg-gray-50">
         <div className="max-w-5xl mx-auto px-6 text-center">
           <h2 className="text-4xl font-bold text-gray-900 mb-6">About KIT MATRIX</h2>
@@ -84,6 +94,7 @@ export default function LandingPage() {
           </p>
         </div>
       </section>
+
 
       {/* DEVELOPERS */}
       <section id="developers" className="py-24 scroll-mt-32 bg-white">
@@ -99,6 +110,14 @@ export default function LandingPage() {
         </div>
       </section>
 
+
+
+
+      {/* REST OF YOUR PAGE... */}
+      {/* ABOUT KIT */}
+      {/* FEATURES */}
+      {/* DEVELOPERS */}
+      
       <Footer />
     </div>
   );
@@ -133,3 +152,4 @@ function DeveloperCard({ image, name, role, desc, link }) {
     </div>
   );
 }
+
