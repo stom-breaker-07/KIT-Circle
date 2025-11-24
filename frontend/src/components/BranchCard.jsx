@@ -36,7 +36,7 @@ export default function BranchCard({ title, code }) {
       <h3 className="text-xl font-bold text-gray-900 mb-3">{title}</h3>
 
       <p className="text-gray-600">
-        Choose year, subject & available academic resources.
+        Access notes, assignments, question papers & more academic resources.
       </p>
 
       <div className="mt-5 inline-flex items-center gap-2 text-indigo-600 font-medium">

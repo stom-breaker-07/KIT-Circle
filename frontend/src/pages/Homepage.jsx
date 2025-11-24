@@ -23,8 +23,8 @@ export default function Homepage() {
             </span>
           </h1>
           <p className="text-gray-700 mt-4 max-w-2xl mx-auto">
-            Choose your branch below, pick year & subject, then select the resource you need — Notes,
-            Assignments, Question Papers, Model Papers or Syllabus copy.
+            Choose your branch below to access Notes, Assignments, Question Papers, Model Papers,
+            Circulars, and Syllabus documents.
           </p>
         </header>
 

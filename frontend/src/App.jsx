@@ -9,6 +9,10 @@ import BranchPageWrapper from "./pages/BranchPageWrapper";
 // Resource Pages
 import Notes from './components/Notes';
 import Assignments from './components/Assignments';
+import QuestionPapers from './components/QuestionPapers';
+import ModelPapers from './components/ModelPapers';
+import Circulars from './components/Circulars';
+import Syllabus from './components/Syllabus';
 
 // Auth Pages
 import Login from "./pages/Login";
@@ -36,14 +40,30 @@ function App() {
         <Route path="/home" element={<Homepage />} />
         <Route path="/branch/:code" element={<BranchPageWrapper />} />
 
-        {/* Resource Pages */}
+        {/* Resource Pages - New Structure */}
         <Route
-          path="/resources/:branch/:year/:subject/notes"
+          path="/resources/:branch/notes"
           element={<Notes />}
         />
         <Route
-          path="/resources/:branch/:year/:subject/assignments"
+          path="/resources/:branch/assignments"
           element={<Assignments />}
+        />
+        <Route
+          path="/resources/:branch/qpapers"
+          element={<QuestionPapers />}
+        />
+        <Route
+          path="/resources/:branch/mpapers"
+          element={<ModelPapers />}
+        />
+        <Route
+          path="/resources/:branch/circulars"
+          element={<Circulars />}
+        />
+        <Route
+          path="/resources/:branch/syllabus"
+          element={<Syllabus />}
         />
 
         {/* Unknown URLs */}
@@ -55,3 +75,4 @@ function App() {
 }
 
 export default App;
+
