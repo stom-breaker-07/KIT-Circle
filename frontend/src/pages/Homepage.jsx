@@ -13,16 +13,16 @@ export default function Homepage() {
   ];
 
   return (
-    <main className="pt-24 pb-12">
+    <main className="pt-24 pb-12 bg-white dark:bg-gray-900 transition-colors duration-200">
       <section className="max-w-7xl mx-auto px-6 py-12">
         <header className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900">
+          <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white">
             KIT MATRIX
-            <span className="block text-indigo-600 text-2xl font-bold">
+            <span className="block text-indigo-600 dark:text-indigo-400 text-2xl font-bold">
               Academic resources for KIT students
             </span>
           </h1>
-          <p className="text-gray-700 mt-4 max-w-2xl mx-auto">
+          <p className="text-gray-700 dark:text-gray-300 mt-4 max-w-2xl mx-auto">
             Choose your branch below to access Notes, Assignments, Question Papers, Model Papers,
             Circulars, and Syllabus documents.
           </p>

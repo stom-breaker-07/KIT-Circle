@@ -1,5 +1,12 @@
-.dark{
 @import "tailwindcss";
 @import "tailwindcss/preflight" layer(base);
 @import "tailwindcss/utilities" layer(utilities);
+
+@import "tailwindcss";
+@import "tailwindcss/preflight" layer(base);
+@import "tailwindcss/utilities" layer(utilities);
+
+:root {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem; /* ensure anchored sections sit below fixed navbar */
 }
