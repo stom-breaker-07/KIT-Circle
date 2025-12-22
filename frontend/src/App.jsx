@@ -8,6 +8,8 @@ import Footer from "./components/Footer";
 import LandingPage from "./components/Landing";
 import Homepage from "./pages/Homepage";
 import BranchPageWrapper from "./pages/BranchPageWrapper";
+import AboutCollege from "./pages/AboutCollege";
+
 
 // Resource Pages
 import Notes from "./components/Notes";
@@ -54,6 +56,8 @@ function App() {
           <Route path="/resources/:branch/mpapers" element={<ModelPapers />} />
           <Route path="/resources/:branch/circulars" element={<Circulars />} />
           <Route path="/resources/:branch/syllabus" element={<Syllabus />} />
+          <Route path="/about-college" element={<AboutCollege />} />
+
 
           {/* Unknown URLs */}
           <Route path="*" element={<Navigate to="/" replace />} />
